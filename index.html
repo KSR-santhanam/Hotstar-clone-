@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney+ Clone</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js" async></script>
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <img src="./images/logo.png" class=" brand-logo" alt="disney+logo">
+    <ul class="nav-links">
+      <li class="nav-items"><a href="">TV</a></li>
+      <li class="nav-items"><a href="">Movie</a></li>
+      <li class="nav-items"><a href="">Sports</a></li>
+      <li class="nav-items"><a href="">Premium</a></li>
+    </ul>
+
+    <div class="right-container">
+      <input type="text" class="search-box" placeholder="search">
+      <button class="Subscribe">Search</button>
+      <a href="#" class="login-btn">Login</button>
+    </div>
+  </nav>
+
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <!-- <div class = "slider">
+         <div class="slide-content">
+           <h2 class="movie-title">Loki</h2>
+           <p class="movie-des">Loki is an American television series created by Michael Waldron for the streaming service Disney.</p>
+          </div>
+          <img src = "./images/slider 1.PNG" class ="card-img alt="Poster1"> 
+        </div> -->
+    </div>
+  </div>
+
+  <div class="video-card-container">
+    <div class="video-card">
+      <img src="./images/disney.PNG" class="video-card-image" alt="disney logo">
+      <Video src="./videos/disney.mp4" muted loop class="card-video"></Video>
+    </div>
+    <div class="video-card">
+      <img src="./images/pixar.PNG" class="video-card-image" alt="pixer logo">
+      <Video src="./videos/pixar.mp4" muted loop class="card-video"></Video>
+    </div>
+    <div class="video-card">
+      <img src="./images/marvel.PNG" class="video-card-image" alt="marvel logo">
+      <Video src="./videos/marvel.mp4" muted loop class="card-video"></Video>
+    </div>
+    <div class="video-card">
+      <img src="./images/star-wars.PNG" class="video-card-image" alt="Star Wars logo">
+      <Video src="./videos/star-war.mp4" muted loop class="card-video"></Video>
+    </div>
+    <div class="video-card">
+      <img src="./images/geographic.PNG" class="video-card-image" alt="geographic logo">
+      <Video src="./videos/geographic.mp4" muted loop class="card-video"></Video>
+    </div>
+  </div>
+
+  <h1 class="title">recommended for you</h1>
+  <div class="movies-list">
+    <a href="#"></a>
+  <button class="pre-btn"><img src="pre.png" alt=""></button>
+    <button class="nxt-btn"><img src="nxt.png" alt=""></button>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/E 12.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Fast and Furious</h2>
+          <h6 class="des">
+            "Action and adventure"</h6>
+          <button onclick="openYouTubeModal('FUK2kdPsBws')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 3.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Jailer</h2>
+          <h6 class="des">"Action and crime</h6>
+          <button onclick="openYouTubeModal('xenOE1Tma0A')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 1.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Loki</h2>
+          <h6 class="des">
+            Action,adventure and fantacy
+          </h6>
+          <button onclick="openYouTubeModal('nW948Va-l10')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 6.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Breaking Bad</h2>
+          <h6 class="des">Crime and thriller</h6>
+          <button onclick="openYouTubeModal('HhesaQXLuRY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 14.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Jil Jung Juk</h2>
+          <h6 class="des">comedy</h6>
+          <button onclick="openYouTubeModal('QdF6tcnQelA')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 3.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Ford v ferrari </h2>
+          <h6 class="des">Action and biography </h6>
+          <button onclick="openYouTubeModal('zyYgDtY2AMY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 15.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Cars</h2>
+          <h6 class="des">Animation</h6>
+          <button onclick="openYouTubeModal('2LeOH9AGJQM')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 1.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Mankatha</h2>
+          <h6 class="des">Action,crime and thriller</h6>
+          <button onclick="openYouTubeModal('vHESM8iR1JE')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 13.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">pirates of the caribben</h2>
+          <h6 class="des">Action and adventure</h6>
+          <button onclick="openYouTubeModal('naQr0uTrH_s')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 6.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Kaithi</h2>
+          <h6 class="des">Action and crime</h6>
+          <button onclick="openYouTubeModal('wLaPChvUpOg')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 4.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Puthupettai</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('w20BaYEjyA8')" class="watchlist-btn">Play</button>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  
+
+  <!-- Popular Shows -->
+
+  <h1 class="title">Tamil movies</h1>
+  <div class="movies-list">
+    <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="images/tm 1.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Mankatha</h2>
+          <h6 class="des">Action,crime and thriller</h6>
+          <button onclick="openYouTubeModal('vHESM8iR1JE')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 2.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Leo</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('Po3jStA673E')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 3.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Jailer</h2>
+          <h6 class="des">Action,comedy</h6>
+          <button onclick="openYouTubeModal('xenOE1Tma0A')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 4.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Puthupettai</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('w20BaYEjyA8')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 5.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Viram</h2>
+          <h6 class="des">Action,crime and thriller</h6>
+          <button onclick="openYouTubeModal('OKBMCL-frPU')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 6.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Kaithi</h2>
+          <h6 class="des">Action,crime and thriller</h6>
+          <button onclick="openYouTubeModal('wLaPChvUpOg')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 7.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Vikram vedha</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('1sVr-uWZPjE')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 8.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Maanaadu</h2>
+          <h6 class="des">Action and sci-fi</h6>
+          <button onclick="openYouTubeModal('VQQdUJIulkg')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 9.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Varnam Aayiram</h2>
+          <h6 class="des">Love,music and drama</h6>
+          <button onclick="openYouTubeModal('Zg2XC_QmtuY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/tm 10.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Aarnya kaandam</h2>
+          <h6 class="des">Action,comedy and crime</h6>
+          <button onclick="openYouTubeModal('qBJ_UpyQw_s')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/tm 11.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Good night</h2>
+          <h6 class="des">comedy,drama and romance</h6>
+          <button onclick="openYouTubeModal('yyMH_Gq2nHE')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/tm 12.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Viduthalai-1</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('0LTMEAk68aw')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/tm 13.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Super deluxe</h2>
+          <h6 class="des">comedy,crime and drama</h6>
+          <button onclick="openYouTubeModal('3-Xq_Zz3nPA')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/tm 14.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Jil Juk Juk</h2>
+          <h6 class="des">Comedy,Action and crime<h6>
+          <button onclick="openYouTubeModal('QdF6tcnQelA')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/tm 15.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Thuparivalan</h2>
+          <h6 class="des">Action,crime and Thriller</h6>
+          <button onclick="openYouTubeModal('FSDUhmOn6bY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- New Releases -->
+  <h1 class="title">English movies</h1>
+  <div class="movies-list">
+    <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="images/E 1.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Loki</h2>
+          <h6 class="des">Action,adventure and fantacy</h6>
+          <button onclick="openYouTubeModal('nW948Va-l10')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 2.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Batman</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('mqqft2x_Aa4')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 3.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Ford v Ferrari</h2>
+          <h6 class="des">Action,bio geography and drama</h6>
+          <button onclick="openYouTubeModal('zyYgDtY2AMY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 4.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Avengers Endgame</h2>
+          <h6 class="des">Action,adventure and drama</h6>
+          <button onclick="openYouTubeModal('TcMBFSGVi1c')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 5.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Deadpool</h2>
+          <h6 class="des">Action and comedy</h6>
+          <button onclick="openYouTubeModal('PyqqfVsAPhk')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 6.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Breaking Bad</h2>
+          <h6 class="des">Crime.drama and thriller</h6>
+          <button onclick="openYouTubeModal('HhesaQXLuRY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 7.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Money heist</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('DqZHAHwTwKY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 8.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Baby driver</h2>
+          <h6 class="des">Action,crime and drama</h6>
+          <button onclick="openYouTubeModal('zTvJJnoWIPk')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 9.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">KarateKid</h2>
+          <h6 class="des">Action,drama and family</h6>
+          <button onclick="openYouTubeModal('XY8amUImEu0')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/E 10.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Strangerthings</h2>
+          <h6 class="des">drama,fantacy and horror</h6>
+          <button onclick="openYouTubeModal('b9EkMc79ZSU')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/E 11.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">The conjuring</h2>
+          <h6 class="des">horror and thriller</h6>
+          <button onclick="openYouTubeModal('ejMMn0t58Lc')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/E 12.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Fast and furious 9</h2>
+          <h6 class="des">Action and crime</h6>
+          <button onclick="openYouTubeModal('FUK2kdPsBws')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/E 13.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Pairates of the caribben</h2>
+          <h6 class="des">Action,adventure and fantacy</h6>
+          <button onclick="openYouTubeModal('naQr0uTrH_s')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/E 14.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Avatar</h2>
+          <h6 class="des">Action,adventure and fantacy</h6>
+          <button onclick="openYouTubeModal('5PSNL1qE6VY')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+       <div class="card">
+        <img src="images/E 15.png" alt="" class="card-img">
+        <div class="card-body">
+          <h2 class="name">Cars</h2>
+          <h6 class="des">Animation</h6>
+          <button onclick="openYouTubeModal('2LeOH9AGJQM')" class="watchlist-btn">Play</button>
+        </div>
+      </div>
+      </section>
+      <!-- end of movie section -->
+    </div>
+  </div>
+</div>
+
+<div class="last-footer">
+    <div class="last-footer-texts">
+        <h3>© 2023 Disney+. All Rights Reserved.</H3>
+        <div class="last-footer-links">
+            <a href="#">Terms Of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">FAQ</a>
+        </div>
+    </div>
+    <div class="last-footer-images">
+        <a href="#"><img src="images/google-playstore.webp" class="dwn" alt=""></a>
+        <a href="#"><img src="images/ios-appstore.webp" class="dwn" alt=""></a>
+    </div>
+  </div>
+<!-- YouTube Modal -->
+<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="youtubeModalLabel">Hotstar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="youtubePlayer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Bootstrap and other scripts -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
